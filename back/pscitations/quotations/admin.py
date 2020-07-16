@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+class QuotationAdmin(admin.ModelAdmin):
+    list_display = ('author', 'quotation')
+    
+admin.site.register(User, QuotationAdmin)
